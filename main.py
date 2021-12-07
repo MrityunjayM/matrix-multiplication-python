@@ -1,6 +1,6 @@
 # import numpy as np
 #  Opening file in read mode...
-f = open('test2.txt', 'r')
+f = open('test1.txt', 'r')
 # Reading no. of rows(and col's)...
 rows_1 , col_1 = [int(x) for x in f.readline().strip().split(' ')]
 # print(rows_1, col_1)
@@ -23,19 +23,18 @@ for line in f:
     else:   break
 
 f.close()
-print(M_1, M_2)
-
+# print(M_1, M_2)
+# Creating zero matrix with expected product matrix dimension.
 prod = [ [0 for c in range(col_2)] for i in range(rows_1) ]
-print(prod)
+# Multiplying matrix 1 with 2.
 if col_1 == rows_2:
     for i in range(rows_1):
-        # prod.append([])
         for j in range(col_2):
-            # prod[i].append(0)
             for k in range(rows_2):
-                print(i, j, k)
+                # Calculating....
                 prod[i][j] += M_1[i][k] * M_2[k][j]
-
+# Warning in case of dimension mis-match.
 else: print('Matrix are of INVALID sizes.')
-
+# OUTPUT: Printing the product matrix.
 print(prod)
+# ~~~ END ~~~
