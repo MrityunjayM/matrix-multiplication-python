@@ -1,6 +1,6 @@
 # import numpy as np
 #  Opening file in read mode...
-f = open('test1.txt', 'r')
+f = open('test3.txt', 'r')
 # Reading no. of rows(and col's)...
 rows_1 , col_1 = [int(x) for x in f.readline().strip().split(' ')]
 # print(rows_1, col_1)
